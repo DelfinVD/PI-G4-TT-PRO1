@@ -1,3 +1,21 @@
-.body{
-background-color: aquamarine;
+#header {
+    background-color: aqua;
+    height: 100px;
 }
+body{
+    background-color: blueviolet;
+}
+.art-head{
+    width: 10%;
+    height: 100px;
+    background-color: chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.art-logo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.
