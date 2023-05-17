@@ -18,4 +18,8 @@ body{
     flex-wrap: wrap;
     width: 60%;
 }
-.
+#footer {
+    background-color: blue;
+    height: 100px;
+
+}
