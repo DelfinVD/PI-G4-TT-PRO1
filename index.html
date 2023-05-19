@@ -9,13 +9,31 @@
 </head>
 <body>
     <header id="header">
-        <section>
-            <article class= "art-head">
-                <img class="art-logo" src="./img/Deezer-logo.png" alt>
+        <section class="header-sec">
+            <article class="art-head">
+                <img class= "art-logo" src="./img/Deezer-logo.png" alt="">
             </article>
-            <article class= "art-buscador"></article>
-            <article class= "art-menu"></article>
-        </section>
+
+            <article class="art-buscador">
+                <form class="form-result" action="./searchResults.html" method="get">
+                    <input  type="text" name="buscar" id="buscar">
+                    <button class="button-art"type="submit">Buscar</button>
+                </form>
+            </article>
+
+            <article class="art-logo-rigth">
+                <img class="logo-img-rigth"src="./img/logo-rigth.png" alt="">
+            </article>
+            
+            <article class="art-nav">
+                <nav class="nav-items"> 
+                    <ul class="flex-r">
+                        <li>Home</li>
+                        <li>Género</li>
+                        <li>Playlist</li>
+                    </ul>
+                </nav>
+            </article>
     </header>
     <main>
         <h1>hola
@@ -23,9 +41,11 @@
     </main>
 
     <footer id="footer">
-        <article class="nombres">
-
-        </article>
+       <ul class="list-art">
+            <li>Fede</li>
+            <li>Delfin</li>
+            <li>Pepito</li>
+       </ul>
     </footer>
 
     <script src="./js/index.js"></script>
