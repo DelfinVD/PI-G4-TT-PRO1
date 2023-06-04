@@ -3,7 +3,12 @@
     height: 100px;
 }
 body{
-    background-color: blueviolet;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    background-color: #f7f8fc;
+    font-family: "Roboto", sans-serif;
+    color: #10182f;
 }
 .art-head{
     width: 20%;
@@ -80,21 +85,53 @@ body{
 .nav-items{
     width: 75%;
 }
-
 #sec-cancion{
-    display: flex;
+    background-color: aqua;
     flex-direction: row;
     flex-wrap: wrap;
+    height: 400px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  background-color: aquamarine;
+  height: 400px;
+  justify-content: space-evenly;
+}
+.card {
+  display: flex;
+  margin: 10px;
+  background-color: aqua;
+  border-radius: 10px;
+  width: 300px;
+  flex-direction: column;
+}
+
+.card-header{
+    padding: 20px;
+    display: flex;
     justify-content: center;
 }
 
-.song{
-    width: 380px;
-    padding: 50px;
-    margin: 100px;
+.card-header img {
+    height: 250px;
+    object-fit: contain;
+    border-radius: 20px;
+    justify-content: flex-start;
 }
-
-article .song img{
-    width: 100%;
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  height: 50px;
+  padding-left: 30px;
 }
-
+#sec-album{
+    background-color: aqua;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 400px;
+}
