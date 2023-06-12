@@ -1,41 +1,62 @@
-const container = document.querySelector('.container');
+const apiKey  = "1d198b2f50da690e7ebfa2b84c19da0e";
 
-let arrayCanciones = [
-    {
-        cancion: "",
-        artista: "",
-    },
-    {
-        cancion: "",
-        artista: "",
-    },
-    {
-        cancion: "",
-        artista: "",
-    },
-    {
-        cancion: "",
-        artista: "",
-    },
-    {
-        cancion: "",
-        artista: "",
-    },
-]
+let url = `https://api.allorigins.win/raw?url=https://api.deezer.com/track?api_key=${apiKey}`;
 
-for (let i = 0; i < arrayCanciones.length; i++) {
-    container.innerHTML += `<div class="card">
-                                <div class="card-header">
-                                    <a href="detalleCancion.html">
-                                    <img class="fotoCancion" alt="cantador" src=".//img/the-dark-side-of-the-moon-pink-floyd-1973.jpg"/>
-                                </a>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="nameCancion">${arrayCanciones[i].cancion}</h3>
-                                    <h4 class="nameArtista">${arrayCanciones[i].artista}</h4>
-                                </div>
-                            </div>`
-}
+fetch(url)
+.then(function(response) {
+  return response.json()
+})
+.then(function(data) {
+
+    console.log(data.results);
+
+//    let arrayCanciones = [
+//     {
+//         cancion: `${}`,
+//         artista: `${}`,
+//     },
+//     {
+//         cancion: `${}`,
+//         artista: `${}`,
+//     },
+//     {
+//         cancion: `${}`,
+//         artista: `${}`,
+//     },
+//     {
+//         cancion: `${}`,
+//         artista: `${}`,
+//     },
+//     {
+//         cancion: `${}`,
+//         artista: `${}`,
+//     }
+//     ]
+   
+
+  const container = document.querySelector('.container');
+
+  
+  for (let i = 0; i < 5; i++) {
+      container.innerHTML += `<div class="card">
+                                  <div class="card-header">
+                                      <a href="detalleCancion.html">
+                                      <img class="fotoCancion" alt="cantador" src=".//img/the-dark-side-of-the-moon-pink-floyd-1973.jpg"/>
+                                  </a>
+                                  </div>
+                                  <div class="card-body">
+                                      <h3 class="nameCancion"></h3>
+                                      <h4 class="nameArtista"></h4>
+                                  </div>
+                              </div>`
+  }
+
+})
+.catch(function(error) {
+  console.log("Error: " + error);
+})
+
+
 
 
 const containerAlbum = document.querySelector('.containerAlbum');

@@ -15,9 +15,10 @@ form.addEventListener('submit', function(e){
         this.sumbit();
 
     }
-    if (busqueda.length  < 3)
+    if (busqueda.length  < 3){}
+    
+});
 
-})
 
 
 
