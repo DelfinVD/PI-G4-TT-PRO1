@@ -6,45 +6,22 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/chart/track?api
   return response.json()
 })
 .then(function(data) {
-    console.log(data);
-
-//    let arrayCanciones = [
-//      {
-//          cancion: `${data[i].title}`,
-//          artista: `${}`,
-//      },
-//     {
-//         cancion: `${}`,
-//         artista: `${}`,
-//     },
-//     {
-//         cancion: `${}`,
-//         artista: `${}`,
-//     },
-//     {
-//         cancion: `${}`,
-//         artista: `${}`,
-//     },
-//     {
-//         cancion: `${}`,
-//         artista: `${}`,
-//     }
-    //  ]
+console.log(data.tracks);
    
-
   const container = document.querySelector('.container');
 
   
+  
   for (let i = 0; i < 5; i++) {
-      container.innerHTML += `<div class="card">
+    container.innerHTML += `<div class="card">
                                   <div class="card-header">
-                                      <a href="detalleCancion.html">
-                                      <img class="fotoCancion" alt="cantador" src=".//img/the-dark-side-of-the-moon-pink-floyd-1973.jpg"/>
+                                     <a href="detalleCancion.html?id=${data.tracks.data[i].id}">
+                                      <img class="fotoCancion" alt="cantador" src="${data.tracks.data[i].album.cover_medium}"/>
                                   </a>
                                   </div>
                                   <div class="card-body">
-                                      <h3 class="nameCancion"></h3>
-                                      <h4 class="nameArtista"></h4>
+                                      <h3 class="nameCancion">${data.tracks.data[i].title}</h3>
+                                      <h4 class="nameArtista">${data.tracks.data[i].artist.name}</h4>
                                   </div>
                               </div>`
   }
@@ -62,38 +39,20 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/chart/albums?ap
   })
   .then(function(data) {
   
-  console.log(data);
+  console.log(data.albums);
 
 const containerAlbum = document.querySelector('.containerAlbum');
-
-// let arrayAlbum = [
-//     {
-//         album: "",
-//     },
-//     {
-//         album: "",
-//     },
-//     {
-//         album: "",
-//     },
-//     {
-//         album: "",
-//     },
-//     {
-//         album: "",
-//     },
-// ]
 
 
 for (let i = 0; i < 5; i++) {
     containerAlbum.innerHTML += `<div class="card">
                                     <div class="card-header">
-                                      <a href="detalleCancion.html">
-                                     <img class="fotoCancion" alt="cantador" src=".//img/the-dark-side-of-the-moon-pink-floyd-1973.jpg"/>
+                                      <a href="detalleDisco.html?id=${data.albums.data[i].id}">
+                                     <img class="fotoCancion" alt="cantador" src="${data.albums.data[i].cover_medium}"/>
                                     </a>
                                     </div>
                                     <div class="card-body">
-                                      <h3 class="nameAlbum"></h3>
+                                      <h3 class="nameAlbum">${data.albums.data[i].title}</h3>
                                      
                                      </div>
                                 </div>`
@@ -110,37 +69,21 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/chart/artists?a
 })
 .then(function(data) {
 
-    console.log(data);
+console.log(data.artists);
 
 const containerArtistas = document.querySelector('.containerArtistas');
 
-let arrayArtistas = [
-    {
-        artista: "",
-    },
-    {
-        artista: "",
-    },
-    {
-        artista: "",
-    },
-    {
-        artista: "",
-    },
-    {
-        artista: "",
-    },
-]
-for (let i = 0; i < arrayArtistas.length; i++) {
+
+for (let i = 0; i < 5; i++) {
     containerArtistas.innerHTML += `<div class="card">
                                         <div class="card-header">
-                                            <a href="detalleDisco.html">
-                                            <img class="fotoCancion" alt="cantador" src=".//img/the-dark-side-of-the-moon-pink-floyd-1973.jpg"/>
+                                            <a href="detalleArtista.html?id=${data.artists.data[i].id}">
+                                            <img class="fotoCancion" alt="cantador" src="${data.artists.data[i].picture_medium}"/>
                                         </a>
                                         </div>
                                         <div class="card-body">
                                             
-                                            <h3 class="nameArtista"></h3>
+                                            <h3 class="nameArtista">${data.artists.data[i].name}</h3>
                                         </div>
                                      </div>`
 }
