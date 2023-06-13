@@ -5,40 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>FrontPage</title>
+    <!-- link api?-->
+    <link rel="s">
+    <!--hoja CSS-->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!--------------------------------------------------------HEADER---------------------------------------------------->
     <header id="header">
         <section class="header-sec">
+
             <article class="art-head">
-                <img class= "art-logo" src="./img/Deezer-logo.png" alt="">
+                <img class= "art-logo" src="./img/Deezer-logo.png" alt="logo">
             </article>
 
             <article class="art-buscador">
-                <form id="form" class="form-result" action="./searchResults.html" method="get">
-                    <input id="busqueda" type="text" name="buscar" id="buscar">
-                    <button id="btn" class="button-art" type="submit">Buscar</button>
+                <form action="./searchResults.html" id="formResult" method="get">
+                    <input id="busquedaForm" type="search" name="buscar" id="buscar" placeholder= "Canciones, Artistas, Albumes, etc...">
+                    <button id="btnBusqueda" type="submit">Buscar</button>
                 </form>
             </article>
 
-            <article class="art-logo-rigth">
-                <img class="logo-img-rigth"src="" alt="">
-            </article>
-            
-            <article class="art-nav">
-                <nav class="nav-items"> 
-                    <ul class="flex-r">
-                        <li>Home</li>
-                        <li>Género</li>
-                        <li>Playlist</li>
+            <article class="artNav">       
+             <nav class="navItems"> 
+                    <ul class="navHeader">
+                        <li class="navHeaderBtn"><a href="./index.html">     INICIO       </a></li> 
+                        <li class="navHeaderBtn"><a href="./playlist.html">  MI PLAYLIST  </a></li>
+                        <li class="navHeaderBtn"><a href="./genres.html">    GÉNEROS      </a></li>
                     </ul>
-                </nav>
+            </nav>
             </article>
+              
     </header>
+   <!--------------------------------------------------------MAIN---------------------------------------------------->
     <main>
+        <h1 class="h1Style">Recomendados para vos.</h1>
+
         <div class="listados-main">
 
-            <h2>Canciones</h2>
+            <h2 class="h2Style">Canciones</h2>
 
             <section id="sec-cancion">
 
@@ -48,7 +54,7 @@
  
             </section>
 
-             <h2>Álbumes</h2>
+             <h2 class="h2Style">Álbumes</h2>
 
             <section id="sec-album">
             
@@ -58,7 +64,7 @@
 
             </section>
 
-            <h2>Artistas</h2>
+            <h2 class="h2Style">Artistas</h2>
                 
             <section id="sec-artistas">
 
@@ -71,15 +77,17 @@
         </div>
     </main>
 
-    <footer id="footer">
-       <ul class="list-art">
-            <li>Federico</li>
-            <li>Delfin</li>
-            <li>Facundo</li>
-       </ul>
-    </footer>
+   <!--------------------------------------------------------FOOTER--------------------------------------------------->
 
-    <script src="./js/index.js"></script>
-    <script src="./js/searchResults.js"></script>
+   <footer class="footer">
+    <ul class="footerUl">
+        <li class="footerLi">    Delfin Van Dimar  </li>
+        <li class="footerLi">    Federico Farje    </li>
+        <li class="footerLi">    Fcaundo Nose      </li>
+    </ul>
+    
+</footer>
+   
+
 </body>
 </html>

@@ -1,7 +1,8 @@
-#header {
-    background-color: aqua;
-    height: 100px;
+*{
+    box-sizing: border-box;
+    font-family: '', sans-serif;
 }
+
 body{
     display: flex;
     margin: 0;
@@ -10,26 +11,31 @@ body{
     font-family: "Roboto", sans-serif;
     color: #10182f;
 }
-.art-head{
-    width: 20%;
+.h1Style{
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+    background-color: whitesmoke;
+}
+        /*-------------Seccion Header ---------------*/
+#header {
+    background-color: lightgreen;
     height: 100px;
-    background-color: chartreuse;
+}
+.art-head{
+    width: 30%;
+    height: 100px;
+    background-color: lightgreen;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 .art-logo{
     display: flex;
     flex-wrap: wrap;
     width: 60%;
 }
-#footer {
-    background-color: blue;
-    height: 100px;
-    margin-bottom: 0px;
-    align-items: center;
-    text-align: center;
-}
+
 .list-art{
     display: flex;
     flex-wrap: nowrap;
@@ -40,53 +46,82 @@ body{
 }
 .art-buscador{
     height: 100px;
-    width: 50%;
+    width: 40%;
     align-items: center;
     display:flex;
-    background-color: brown;
+    background-color: lightgreen;
 }
 .header-sec{
-    height: 15vh;
+    height: 100px;
+    width: 100%;
     display: flex;
-
 }
-.button-art{
-    background-color: white;
-    height: 37px;
-
+/*pONER URL DE LUPA (NO FUNCIONA)*/
+#btnBusqueda{
+    height: 30px;
+    background-image: url(); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
 }
-.form-result{
-    width: 200%;
-    display: flex;
-    flex-direction: row;
+#busquedaForm{
     justify-content: center;
+    width: 350px;
+    height: 35px;
 }
 #buscar{
     width: 70%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
 }
-.flex-r {
+.navHeader{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
 }
-.art-nav {
-    width: 30%;
+.artNav {
     align-items: center;
     display:flex;
+    width: 30%;
 }
-.nav-items ul{
+.navItems{
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+}
+.navHeaderBtn{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+
+}
+ul,li{
+    list-style-type: none;
 }
 .nav-items{
     width: 75%;
+    justify-content: space-around;
+}
+
+/*FOOTER (EDITAR FONT Y COLORES)*/
+
+.footer {
+    display: flex;
+    height: 16vh;
+    background-color: lightgreen
+}
+ .footerUl{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 92%;
+        color: black;
+        font-weight: bolder;
+ }
+
+       /*-------------Seccion Body ---------------*/
+.h2Style{
+    background-color: whitesmoke;
 }
 #sec-cancion{
-    background-color: aqua;
+    background-color: whitesmoke;
     flex-direction: row;
     flex-wrap: wrap;
     height: 400px;
@@ -96,7 +131,7 @@ body{
   display: flex;
   width: 100%;
   flex-direction: row;
-  background-color: aquamarine;
+  background-color: whitesmoke;
   height: 400px;
   justify-content: space-evenly;
 
@@ -106,7 +141,7 @@ body{
     display: flex;
     width: 100%;
     flex-direction: row;
-    background-color: aquamarine;
+    background-color: whitesmoke;
     height: 400px;
     justify-content: space-evenly;
 }
@@ -115,7 +150,7 @@ body{
     display: flex;
     width: 100%;
     flex-direction: row;
-    background-color: aquamarine;
+    background-color: whitesmoke;
     height: 400px;
     justify-content: space-evenly;
 }
