@@ -99,6 +99,10 @@ ul,li{
     width: 75%;
     justify-content: space-around;
 }
+.aArt{
+        text-decoration: none; /* Elimina el subrayado */
+        color: #000; /* Cambia el color del enlace */
+}
 
 /*FOOTER (EDITAR FONT Y COLORES)*/
 
@@ -111,7 +115,7 @@ ul,li{
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 92%;
+        width: 100%;
         color: black;
         font-weight: bolder;
  }
@@ -157,33 +161,37 @@ ul,li{
 
 .card {
   display: flex;
-  margin: 10px;
-  background-color: aqua;
+  background-color: whitesmoke;
   border-radius: 10px;
   width: 300px;
   flex-direction: column;
 }
 
 .card-header{
-    padding-left: 20px;
     display: flex;
     justify-content: center;
-    
+    padding-top: 30px;
 }
 
 .card-header img {
     height: 250px;
     object-fit: contain;
     border-radius: 20px;
-    justify-content: flex-start;
 }
 .card-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 20px;
   height: 50px;
-  padding-left: 30px;
+  font-size: x-large;
+  align-items: center;
+  padding-top: 20px;
+}
+.nameArtista{
+    margin: 0%;
+}
+.nameCancion{
+    margin: 0%;
 }
 #sec-album{
     background-color: aqua;
