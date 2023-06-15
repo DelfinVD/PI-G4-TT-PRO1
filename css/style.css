@@ -106,18 +106,18 @@ ul,li{
 
 /*FOOTER (EDITAR FONT Y COLORES)*/
 
-.footer {
-    display: flex;
-    height: 16vh;
-    background-color: lightgreen
+footer{
+    background-color: lightgreen;
 }
- .footerUl{
+
+.footerUl{
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 100%;
         color: black;
         font-weight: bolder;
+        padding-top: 50px;
  }
 
        /*-------------Seccion Body ---------------*/
@@ -200,14 +200,44 @@ ul,li{
     height: 400px;
 }
 
+        /*-------------Detalle Cancion ---------------*/
 
 
+#sec-DCancion{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   align-items: start;
+   padding: 20px;
+}
+
+.art-DCancionMI{
+padding-left: 30px;
+}
+
+.art-DCancionbtns{
+    padding: 0px;
+}
+
+.nombreDCancion{
+    font-size: 70px;
+
+}
+
+.tituloDCancion{
+    font-size: 40px;
+}
 
 
+#agregarAMiPlaylist{
+    margin: 10px;
+    padding: 5px;
+}
 
-
-
-
+.irAMiPlaylist{
+    margin: 10px;
+    padding: 10px;
+}
 
 
 

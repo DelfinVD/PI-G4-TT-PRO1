@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <!--hoja CSS-->
+    <title>Detalle de Canción</title>
+        
         <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!--------------------------------------------------------Header--------------------------------------------------->
+
     <header id="header">
         <section class="header-sec">
 
@@ -33,27 +35,41 @@
             </nav>
             </article>
         </section>
-    </header>
 
-       <!--------------------------------------------------------MAIN--------------------------------------------------->
+    </header>
+   <!--------------------------------------------------------MAIN--------------------------------------------------->
 
     <main>
+        <section id="sec-DCancion">
+            <article class="art-DCancion">  
 
-        <section id="sec-cancion">
+                 <img class= "imgCancion" src="" alt="">
 
-                <div class="container">
+            </article>
 
-                </div>
+            <article class="art-DCancionMI">
 
+                <h2  class= "nombreDCancion" ></h2>
+                 <h3 class="tituloDCancion">Artista: <strong class= "artistaDCancion"></strong></h3>
+                 <h3 class="tituloDCancion">Album: <strong class= "albumDCancion"></strong> </h3>
+
+                <ul class="art-DCancionbtns">
+
+                    <li><button id="agregarAMiPlaylist"> <h3 class="btnName">      Agregar a mi playlist </h3></button></li>
+
+                    <li><button class="irAMiPlaylist">   <a href="./playlist.html">Ir a mi playlist      </a></button></li></ul>
+                        
+                </ul>
+
+            </article>
          </section>
-
-
-
     </main>
+
+    
               
    <!--------------------------------------------------------FOOTER--------------------------------------------------->
 
-   <footer class="footer">
+ <footer>
     <ul class="footerUl">
         <li class="footerLi">    Delfin Van Dimar  </li>
         <li class="footerLi">    Federico Farje    </li>
@@ -62,7 +78,7 @@
     
 </footer>
 
-<script src="./js/detalleCancion.js"></script>
+<script type="text/javascript" src="./js/detalleCancion.js"></script>
    
 </body>
 </html>
