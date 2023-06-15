@@ -1,27 +1,28 @@
-const busqueda = document.querySelector('#busqueda')
+/*--------------------FORMULARIO--------------------*/
+const busqueda = document.querySelector('#busquedaForm')
 const btn      = document.querySelector('#btn')
-const form     = document.querySelector('#form')
+const form     = document.querySelector('#formResult')
 
 form.addEventListener('submit', function(e){
 
     e.preventDefault();
 
+    console.log(busqueda.value);
+
     if (busqueda.value == ''){
 
         alert('No puedes enviar el campo vacio')
 
-    } else{
+    } else if (busqueda.value.length  < 3){
+        
+        alert('Debes ingresar al menos 3 caracteres!');
+
+        console.log(busqueda.value)
+    } else {
 
         this.sumbit();
-
     }
-    if (busqueda.length  < 3){}
-    
-});
+})
 
 
 
-
-/*
-Que el término buscado tenga al menos 3 caracteres. Si no los tiene avisar por pantalla al usuario.
-*/

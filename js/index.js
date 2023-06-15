@@ -1,3 +1,29 @@
+/*--------------------FORMULARIO--------------------*/
+const busqueda = document.querySelector('#busquedaForm')
+const btn      = document.querySelector('#btn')
+const form     = document.querySelector('#formResult')
+
+form.addEventListener('submit', function(e){
+
+    e.preventDefault();
+
+    console.log(busqueda.value);
+
+    if (busqueda.value == ''){
+
+        alert('No puedes enviar el campo vacio')
+
+    } else if (busqueda.value.length  < 3){
+        
+        alert('Debes ingresar al menos 3 caracteres!');
+
+        console.log(busqueda.value)
+    } else {
+
+        this.sumbit();
+    }
+})
+
 const apiKey = "1d198b2f50da690e7ebfa2b84c19da0e";
 
 
