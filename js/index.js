@@ -71,6 +71,14 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/chart/albums?ap
 
 
     for (let i = 0; i < 5; i++) {
+      console.log(data.albums.data[i].title.length);
+      let titulo = data.albums.data[i].title
+
+      if (data.albums.data[i].title.length==110) {
+        titulo = "SPIDER-MAN"
+      } else if (data.albums.data[i].title.length==40) { 
+        titulo = "Los Niños de Sara"
+      }
       containerAlbum.innerHTML += `<div class="card">
                                     <div class="card-header">
                                       <a href="detalleDisco.html?id=${data.albums.data[i].id}">
@@ -78,7 +86,7 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/chart/albums?ap
                                     </a>
                                     </div>
                                     <div class="card-body">
-                                      <h3 class="nameAlbum">${data.albums.data[i].title}</h3>
+                                      <h3 class="nameAlbum">${titulo}</h3>
                                      
                                      </div>
                                 </div>`
