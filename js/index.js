@@ -20,8 +20,8 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/chart/track?api
                                   </a>
                                   </div>
                                   <div class="card-body">
-                                      <h3 class="nameCancion"><a href="./detalleCancion.html" class="aArt"> ${data.tracks.data[i].title}       </a></h3>
-                                      <h4 class="nameArtista"><a href="./detalleArtista.html" class="aArt"> ${data.tracks.data[i].artist.name}  </a></h4>
+                                      <h3 class="nameCancion"><a href="./detalleCancion.html" class="aArt"> ${data.tracks.data[i].title}</a></h3>
+                                      <h4 class="nameArtista"><a href="./detalleArtista.html" class="aArt"> ${data.tracks.data[i].artist.name}</a></h4>
                                   </div>
                               </div>`
     }
