@@ -32,41 +32,53 @@ let id = qStringObj.get(`id`);
 
 
 let proxi = "https://cors-anywhere.herokuapp.com/"; 
-let endpoint ="https://api.deezer.com/artist/" + id; 
-let url = proxi+endpoint;
+let endpoint ="https://api.deezer.com/artist/" + id;
 
+let url = proxi+endpoint
+let = limiteAlbum = "/albums?limit=5"
 
 fetch(url)
 .then(function (response) {
     return response.json()
   })
 .then(function (data) {
-    console.log(data);
 
     let imgArtista = document.querySelector(".imgArtista");
     let nombreDArtista = document.querySelector(".nombreDArtista");
 
 
-    imgArtista.src = data.picture_big;
-    nombreDArtista.innerText = data.name;
-
-    let urlAlbums = url + '/album?limit=5'
-    let ulAlbumsEnArtista = document.querySelector('.ulAlbumsEnArtista')
-
-})
-      /*  let ulAlbumsenArtista = document.querySelector(".ulAlbumsEnArtista");
-        let listaAlbumesEnArtista = "";
-        
-
-        for (let i= 0; i < 5; i++) {
-        let albumEnA = data..data[i]
-        console.log(cancionEnD);
-        listaCancionesEnD += `<li class='liCancionesDisco'>
-                                <p><a class = "listaCancionesDiscoStyle" href="detallesCancion.html?id=${cancionEnD.id}">${cancionEnD.title}</a>
-                                </p>
-                            </li>`
-        }
-        ulCancionesEnDisco.innerHTML += listaCancionesEnD*/
-.catch(function (error) {
+     imgArtista.src = data.picture_big;
+     nombreDArtista.innerText = data.name;
+    
+    }).catch(function (error) {
   console.log("Error: " + error);
 });
+
+let albumUrl = url + limiteAlbum;
+
+fetch(albumUrl)
+.then(function (response) {
+    return response.json()
+})
+.then(function (data) {
+    console.log(data);
+
+    let ulAlbumsEnArtista = document.querySelector(".ulAlbumsEnArtista");
+    
+    let listaAlbum = "";
+    let lista = ''
+      for (let i=0; i < data.data.length; i++){
+        let listaAlbum = data.data[i];
+        lista += `<li class='liAlbumArtista'>
+                            <p><a class = "listaAlbumDiscoStyle" href="detallesDisco.html?id=${listaAlbum.id}">${listaAlbum.title}</a>
+                            </p>
+                       </li>`
+    
+        
+        }
+        ulAlbumsEnArtista.innerHTML = lista
+
+})
+.catch(function (error) {
+    console.log("Error: " + error);
+})

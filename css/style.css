@@ -2,7 +2,6 @@
     box-sizing: border-box;
     font-family: '', sans-serif;
 }
-
 body{
     display: flex;
     margin: 0;
@@ -10,6 +9,7 @@ body{
     background-color: #f7f8fc;
     font-family: "Roboto", sans-serif;
     color: #10182f;
+    width: 1024px;
 }
 .h1Style{
     font-size: x-large;
