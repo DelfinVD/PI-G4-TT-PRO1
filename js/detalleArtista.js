@@ -3,6 +3,7 @@ const busqueda = document.querySelector('#busquedaForm')
 const btn      = document.querySelector('#btn')
 const form     = document.querySelector('#formResult')
 
+
 form.addEventListener('submit', function(e){
 
     e.preventDefault();
@@ -43,8 +44,8 @@ fetch(url)
         let nombreDArtista = document.querySelector(`.nombreDArtista`)
     
 
-        imgArtista.src = data.cover_big;
-        nombreDArtista.innerText = data.title;
+        imgArtista.src = data.picture;
+        nombreDArtista.innerText = data.name;
    
 
     //   let ulCancionesEnDisco = document.querySelector(".ulCancionesEnDisco");
