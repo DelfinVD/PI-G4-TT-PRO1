@@ -1,6 +1,7 @@
+/*--------------------FORMULARIO--------------------*/
 const busqueda = document.querySelector('#busquedaForm')
 const btn      = document.querySelector('#btn')
-const form     = document.querySelector('#formResult')
+const form     = document.querySelector('form')
 
 form.addEventListener('submit', function(e){
 
@@ -19,7 +20,7 @@ form.addEventListener('submit', function(e){
         console.log(busqueda.value)
     } else {
 
-        this.sumbit();
+      form.submit();
     }
 })
 
@@ -29,6 +30,7 @@ let queryStringObj = new URLSearchParams (queryString);
 let id = queryStringObj.get(`id`);
 
 let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/track/"+ id;
+
 
 fetch(url)
 .then(function (response) {
@@ -53,3 +55,48 @@ fetch(url)
 .catch(function (error) {
   console.log("Error: " + error);
 })
+
+/*                      Guardar en favorito                         */
+
+/* Crear un array vacio para luego ser completado con lo que trae localStorage */
+let cancionesFavoritas = [];
+
+/* Recuperar localStorage de la key "favoritos" */
+let recuperoStorage = localStorage.getItem('cancionesFavoritas');
+
+/* Preguntar si es distinto de nulo para ver si tiene info */
+if (recuperoStorage != null) {
+    cancionesFavoritas = JSON.parse(recuperoStorage);
+}
+
+/* Recurperar el elemento del DOM */
+let agregarAMiPlaylist = document.querySelector('#agregarAMiPlaylist');
+
+/* preguntar si el array favoritos incluye este ID - si lo incluye cambiar el texto a quitar de favoritos*/
+
+if (cancionesFavoritas.includes(id)) {
+    agregarAMiPlaylist.innerText = 'Quitar de Favoritos'
+}
+
+/* agregar el evento click a el boton de Fav - preguntar si el array de favoritos inlcuye el ID del personaje
+
+TRUE = si clickeo el btn y existe quiero eliminarlo y cambiar el texto del btn
+FALSE = si clickeo el btn y NOO existe quiero pushearlo y cambiar el texto del btn
+
+Pasar FAVORITOS a JSON y subirlos a localStorage
+*/
+
+agregarAMiPlaylist.addEventListener('click', function() {
+    if (cancionesFavoritas.includes(id)) {
+        let indice = cancionesFavoritas.indexOf(id)
+        cancionesFavoritas.splice(indice, 1);
+        agregarAMiPlaylist.innerText = 'Agregar a favorito'
+    } else {
+        cancionesFavoritas.push(id);
+        agregarAMiPlaylist.innerText = 'Quitar de favorito'
+    }
+
+    let cancionesFavoritasToString = JSON.stringify(cancionesFavoritas);
+    localStorage.setItem('cancionesFavoritas', cancionesFavoritasToString )
+} )
+

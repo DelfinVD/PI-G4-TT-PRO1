@@ -1,7 +1,7 @@
 /*--------------------FORMULARIO--------------------*/
 const busqueda = document.querySelector('#busquedaForm')
 const btn      = document.querySelector('#btn')
-const form     = document.querySelector('#formResult')
+const form     = document.querySelector('form')
 
 form.addEventListener('submit', function(e){
 
@@ -20,7 +20,7 @@ form.addEventListener('submit', function(e){
         console.log(busqueda.value)
     } else {
 
-        this.sumbit();
+      form.submit();
     }
 })
 
@@ -47,9 +47,20 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}/art
   .then(function (data) {
     console.log(data)
 
-   
+    let ulGeneroFA = document.querySelector(`.ulGeneroFA`)
 
+    for (let i = 0; i < data.data.name.length; i++) {
+         let generoED = data.data.name[i];
+         console.log(generoED);
 
+    listaAG += `<li class= "liGeneros">
+                    <img class='imgCancionGenero' src="${data.data[i].picture_medium}" alt="imagenCanciónFavorita">
+                     <a class='' href="./detalleCancion.html?id=${data.data[i].id}">
+                      <p class="nombreArtistaGenero">${data.data[i].name}</p>
+                     </a>
+                 </li>`
+    }
+    ulGeneroFA.innerHTML +=listaAG
 
   })
   .catch(function (error) {
