@@ -37,10 +37,10 @@ fetch(url)
 .then(function (data) {
     console.log(data);
 
-    let imgCancion = document.querySelector(".imgCancion")
-    let nombreDCancion = document.querySelector(`.nombreDCancion`)
-    let artistaDCancion = document.querySelector(`.artistaDCancion`)
-    let albumDCancion = document.querySelector(`.albumDCancion`)
+    let imgCancion = document.querySelector(".imgCancion");
+    let nombreDCancion = document.querySelector(`.nombreDCancion`);
+    let artistaDCancion = document.querySelector(`.artistaDCancion`);
+    let albumDCancion = document.querySelector(`.albumDCancion`);
 
     imgCancion.src = data.album.cover_big;
     nombreDCancion.innerText = data.title;

@@ -38,11 +38,11 @@ fetch(url)
 .then(function (data) {
     console.log(data);
 
-     let imgDisco = document.querySelector(".imgDisco")
-      let nombreDDisco = document.querySelector(`.nombreDDisco`)
+      let imgDisco =      document.querySelector(".imgDisco")
+      let nombreDDisco =  document.querySelector(`.nombreDDisco`)
       let artistaDDisco = document.querySelector(`.artistaDDisco`)
-      let generoDDisco = document.querySelector(`.generoDDisco`)
-      let fechaDDisco = document.querySelector(`.fechaDDisco`)
+      let generoDDisco =  document.querySelector(`.generoDDisco`)
+      let fechaDDisco =   document.querySelector(`.fechaDDisco`)
 
 
       imgDisco.src = data.cover_big;

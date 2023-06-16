@@ -244,27 +244,19 @@ padding-left: 50px;
     text-decoration: none;
     color: #000;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width:768px){
-
+.nombreDArtista{
+    font-size: 70px;
+    margin: 0;
 }
+
+
 
 @media (max-width:420px){
 
+ main{
+        min-height: 60vh;
+ }
+body{
+        max-width: 420px;
+ }
 }

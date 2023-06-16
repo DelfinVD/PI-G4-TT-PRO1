@@ -23,14 +23,18 @@ form.addEventListener('submit', function(e){
         this.sumbit();
     }
 })
+/*--------------------------------------*/
 
-let qS = location.search;
-let qSObj = new URLSearchParams (qS);
+let qString = location.search;
+let qStringObj = new URLSearchParams (qString);
 
-let id = qSObj.get(`id`);
+let id = qStringObj.get(`id`);
 
 
-let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/artist/"+ id;
+let proxi = "https://cors-anywhere.herokuapp.com/"; 
+let endpoint ="https://api.deezer.com/artist/" + id; 
+let url = proxi+endpoint;
+
 
 fetch(url)
 .then(function (response) {
@@ -39,30 +43,30 @@ fetch(url)
 .then(function (data) {
     console.log(data);
 
-        let imgArtista = document.querySelector(".imgArtista")
-        let nombreDArtista = document.querySelector(`.nombreDArtista`)
-    
+    let imgArtista = document.querySelector(".imgArtista");
+    let nombreDArtista = document.querySelector(".nombreDArtista");
 
-        imgArtista.src = data.cover_big;
-        nombreDArtista.innerText = data.title;
-   
 
-    //   let ulCancionesEnDisco = document.querySelector(".ulCancionesEnDisco");
-    //   let listaCancionesEnD = "";
-      
+    imgArtista.src = data.picture_big;
+    nombreDArtista.innerText = data.name;
 
-    //   for (let i= 0; i < data.tracks.data.length; i++) {
-    //     let cancionEnD = data.tracks.data[i]
-    //     console.log(cancionEnD);
-    //     listaCancionesEnD += `<li class='liCancionesDisco'>
-    //                             <p><a class = "listaCancionesDiscoStyle" href="detallesCancion.html?id=${cancionEnD.id}">${cancionEnD.title}</a>
-    //                             </p>
-    //                          </li>`
-    //   }
-    //   ulCancionesEnDisco.innerHTML += listaCancionesEnD
+    let urlAlbums = url + '/album?limit=5'
+    let ulAlbumsEnArtista = document.querySelector('.ulAlbumsEnArtista')
 
 })
+      /*  let ulAlbumsenArtista = document.querySelector(".ulAlbumsEnArtista");
+        let listaAlbumesEnArtista = "";
+        
+
+        for (let i= 0; i < 5; i++) {
+        let albumEnA = data..data[i]
+        console.log(cancionEnD);
+        listaCancionesEnD += `<li class='liCancionesDisco'>
+                                <p><a class = "listaCancionesDiscoStyle" href="detallesCancion.html?id=${cancionEnD.id}">${cancionEnD.title}</a>
+                                </p>
+                            </li>`
+        }
+        ulCancionesEnDisco.innerHTML += listaCancionesEnD*/
 .catch(function (error) {
   console.log("Error: " + error);
-})
-
+});
