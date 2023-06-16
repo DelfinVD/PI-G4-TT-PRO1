@@ -190,6 +190,7 @@ footer{
 .nameArtista{
     margin: 0%;
 }
+
 .nameCancion{
     margin: 0%;
 }
@@ -200,7 +201,7 @@ footer{
     height: 400px;
 }
 
-        /*-------------Detalle Cancion ---------------*/
+        /*-------------Detalles ---------------*/
 
 
 #sec-DCancion{
@@ -212,7 +213,7 @@ footer{
 }
 
 .art-DCancionMI{
-padding-left: 30px;
+padding-left: 50px;
 }
 
 .art-DCancionbtns{
@@ -238,6 +239,14 @@ padding-left: 30px;
     margin: 10px;
     padding: 10px;
 }
+
+.ulCancionesEnDisco{
+    text-decoration: none;
+    color: #000;
+}
+
+
+
 
 
 
