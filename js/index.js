@@ -20,7 +20,7 @@ form.addEventListener('submit', function(e){
         console.log(busqueda.value)
     } else {
 
-      form.sumbit();
+      form.submit();
     }
 })
 

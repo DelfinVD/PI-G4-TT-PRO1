@@ -1,7 +1,7 @@
 /*--------------------FORMULARIO--------------------*/
 const busqueda = document.querySelector('#busquedaForm')
 const btn      = document.querySelector('#btn')
-const form     = document.querySelector('#formResult')
+const form     = document.querySelector('form')
 
 form.addEventListener('submit', function(e){
 
@@ -20,6 +20,6 @@ form.addEventListener('submit', function(e){
         console.log(busqueda.value)
     } else {
 
-        this.sumbit();
+      form.submit();
     }
 })
