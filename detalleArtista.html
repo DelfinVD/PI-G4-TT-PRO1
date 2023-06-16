@@ -1,82 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-        <!--hoja CSS-->
-        <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-<!--------------------------------------------------------HEADER---------------------------------------------------->
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+            <!--hoja CSS-->
+            <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+    <!--------------------------------------------------------HEADER---------------------------------------------------->
 
-    <header id="header">
-        <section class="header-sec">
+        <header id="header">
+            <section class="header-sec">
 
-            <article class="art-head">
-                <img class= "art-logo" src="./img/Deezer-logo.png" alt="logo">
-            </article>
+                <article class="art-head">
+                    <img class= "art-logo" src="./img/Deezer-logo.png" alt="logo">
+                </article>
 
-            <article class="art-buscador">
-                <form action="./searchResults.html" id="formResult" method="get">
-                    <input id="busquedaForm" type="search" name="buscar" id="buscar" placeholder= "Canciones, Artistas, Albumes, etc...">
-                    <button id="btnBusqueda" type="submit">Buscar</button>
-                </form>
-            </article>
+                <article class="art-buscador">
+                    <form action="./searchResults.html" id="formResult" method="get">
+                        <input id="busquedaForm" type="search" name="buscar" id="buscar" placeholder= "Canciones, Artistas, Albumes, etc...">
+                        <button id="btnBusqueda" type="submit">Buscar</button>
+                    </form>
+                </article>
 
-            <article class="artNav">       
-             <nav class="navItems"> 
-                    <ul class="navHeader">
-                        <li class="navHeaderBtn"><a href="./index.html">     INICIO       </a></li> 
-                        <li class="navHeaderBtn"><a href="./playlist.html">  MI PLAYLIST  </a></li>
-                        <li class="navHeaderBtn"><a href="./genres.html">    GÉNEROS      </a></li>
+                <article class="artNav">       
+                <nav class="navItems"> 
+                        <ul class="navHeader">
+                            <li class="navHeaderBtn"><a href="./index.html">     INICIO       </a></li> 
+                            <li class="navHeaderBtn"><a href="./playlist.html">  MI PLAYLIST  </a></li>
+                            <li class="navHeaderBtn"><a href="./genres.html">    GÉNEROS      </a></li>
+                        </ul>
+                </nav>
+                </article>
+                
+        </header>
+    <!--------------------------------------------------------MAIN--------------------------------------------------->
+        <main>
+            <section id="sec-DCancion">
+                <article class="art-DArtista">  
+
+                    <img class= "imgArtista" src="" alt="">
+                     <h2  class= "nombreDArtista" ></h2>
+                </article>
+                
+                 <article id="listaDArtista">
+                    <h2>Top 5 Albumes:</h2>
+                    <ul class="ulAlbumsEnArtista">
+                       
                     </ul>
-            </nav>
-            </article>
-              
-    </header>
-   <!--------------------------------------------------------MAIN--------------------------------------------------->
-    <main>
-        <section id="sec-DCancion">
-            <article class="art-DDisco">  
 
-                 <img class= "imgArtista" src="" alt="">
-                 
-            </article>
+                </article>
+            </section>          
+        </main>
+
+    <!--------------------------------------------------------FOOTER--------------------------------------------------->
+
+        <footer>
+            <ul class="footerUl">
+            <li class="footerLi">    Delfin Van Dimar  </li>
+            <li class="footerLi">    Federico Farje    </li>
+            <li class="footerLi">    Fcaundo Nose      </li>
+            </ul>
             
-            <article class="art-DCancionMI">
+        </footer>
 
-                <h2  class= "nombreDArtista" ></h2>
-
-            </article>
-
-        <article id="listaDDisco">
-
-                <ul class="ulCancionesEnDisco">
-                    <h2>Albumes:</h2>
-                 </ul>
-
-
-        </article>
-
-</section>
-
-        
-    </main>
-
-   <!--------------------------------------------------------FOOTER--------------------------------------------------->
-
-   <footer>
-    <ul class="footerUl">
-        <li class="footerLi">    Delfin Van Dimar  </li>
-        <li class="footerLi">    Federico Farje    </li>
-        <li class="footerLi">    Fcaundo Nose      </li>
-    </ul>
-    
-</footer>
-
-<script type="text/javascript" src="./js/detalleArtista.js"></script>
-
-</body>
+        <script type="text/javascript" src="./js/detalleArtista.js"></script>
+    </body>
 </html>
