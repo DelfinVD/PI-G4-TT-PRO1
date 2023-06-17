@@ -41,7 +41,7 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/chart/track?api
     for (let i = 0; i < 5; i++) {
       container.innerHTML += `<div class="card">
                                   <div class="card-header">
-                                     <a href="detalleDisco.html?id=${data.albums.data[i].id}">
+                                     <a href="./detalleDisco.html?id=${data.albums.data[i].id}">
                                       <img class="fotoCancion" alt="cantador" src="${data.tracks.data[i].album.cover_medium}"/>
                                   </a>
                                   </div>

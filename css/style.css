@@ -15,7 +15,6 @@ body{
     font-size: x-large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
-    background-color: whitesmoke;
 }
         /*-------------Seccion Header ---------------*/
 #header {
@@ -121,11 +120,9 @@ footer{
  }
 
        /*-------------Seccion Body ---------------*/
-.h2Style{
-    background-color: whitesmoke;
-}
+/* .h2Style{
+} */
 #sec-cancion{
-    background-color: whitesmoke;
     flex-direction: row;
     flex-wrap: wrap;
     height: 400px;
@@ -135,7 +132,6 @@ footer{
   display: flex;
   width: 100%;
   flex-direction: row;
-  background-color: whitesmoke;
   height: 400px;
   justify-content: space-evenly;
 
@@ -145,7 +141,6 @@ footer{
     display: flex;
     width: 100%;
     flex-direction: row;
-    background-color: whitesmoke;
     height: 400px;
     justify-content: space-evenly;
 }
@@ -154,14 +149,12 @@ footer{
     display: flex;
     width: 100%;
     flex-direction: row;
-    background-color: whitesmoke;
     height: 400px;
     justify-content: space-evenly;
 }
 
 .card {
   display: flex;
-  background-color: whitesmoke;
   border-radius: 10px;
   width: 300px;
   flex-direction: column;
@@ -195,7 +188,6 @@ footer{
     margin: 0%;
 }
 #sec-album{
-    background-color: aqua;
     flex-direction: row;
     flex-wrap: wrap;
     height: 400px;
@@ -255,12 +247,6 @@ padding-left: 50px;
 
 
 
-@media (max-width:420px){
+@media (min-width:320px){
 
- main{
-        min-height: 60vh;
- }
-body{
-        max-width: 420px;
- }
 }

@@ -37,7 +37,6 @@ name.innerText = nameGenero;
 
 
 
-let listaAG = "";
 
 
 fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}/artists`)
@@ -48,14 +47,13 @@ fetch(`https://api.allorigins.win/raw?url=https://api.deezer.com/genre/${id}/art
     console.log(data)
 
     let ulGeneroFA = document.querySelector(`.ulGeneroFA`)
+    let listaAG = "";
 
-    for (let i = 0; i < data.data.name.length; i++) {
-         let generoED = data.data.name[i];
-         console.log(generoED);
+    for (let i = 0; i < data.data.length; i++) {
 
     listaAG += `<li class= "liGeneros">
                     <img class='imgCancionGenero' src="${data.data[i].picture_medium}" alt="imagenCanciónFavorita">
-                     <a class='' href="./detalleCancion.html?id=${data.data[i].id}">
+                     <a class='' href="./detalleArtista.html?id=${data.data[i].id}">
                       <p class="nombreArtistaGenero">${data.data[i].name}</p>
                      </a>
                  </li>`
