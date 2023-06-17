@@ -15,17 +15,16 @@ body{
     font-size: x-large;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bolder;
-    background-color: whitesmoke;
 }
         /*-------------Seccion Header ---------------*/
 #header {
-    background-color: lightgreen;
+    background-color: lightskyblue;
     height: 100px;
 }
 .art-head{
     width: 30%;
     height: 100px;
-    background-color: lightgreen;
+    background-color: lightskyblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +48,8 @@ body{
     width: 40%;
     align-items: center;
     display:flex;
-    background-color: lightgreen;
+    background-color: lightskyblue;
+    ;
 }
 .header-sec{
     height: 100px;
@@ -107,7 +107,7 @@ ul,li{
 /*FOOTER (EDITAR FONT Y COLORES)*/
 
 footer{
-    background-color: lightgreen;
+    background-color: lightskyblue;
 }
 
 .footerUl{
@@ -122,10 +122,8 @@ footer{
 
        /*-------------Seccion Body ---------------*/
 .h2Style{
-    background-color: whitesmoke;
 }
 #sec-cancion{
-    background-color: whitesmoke;
     flex-direction: row;
     flex-wrap: wrap;
     height: 400px;
@@ -135,7 +133,6 @@ footer{
   display: flex;
   width: 100%;
   flex-direction: row;
-  background-color: whitesmoke;
   height: 400px;
   justify-content: space-evenly;
 
@@ -145,7 +142,6 @@ footer{
     display: flex;
     width: 100%;
     flex-direction: row;
-    background-color: whitesmoke;
     height: 400px;
     justify-content: space-evenly;
 }
@@ -154,14 +150,12 @@ footer{
     display: flex;
     width: 100%;
     flex-direction: row;
-    background-color: whitesmoke;
     height: 400px;
     justify-content: space-evenly;
 }
 
 .card {
   display: flex;
-  background-color: whitesmoke;
   border-radius: 10px;
   width: 300px;
   flex-direction: column;
@@ -177,6 +171,7 @@ footer{
     height: 250px;
     object-fit: contain;
     border-radius: 20px;
+    width: 100%;
 }
 .card-body {
   display: flex;
@@ -195,7 +190,6 @@ footer{
     margin: 0%;
 }
 #sec-album{
-    background-color: aqua;
     flex-direction: row;
     flex-wrap: wrap;
     height: 400px;
