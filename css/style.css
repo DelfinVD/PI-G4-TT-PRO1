@@ -249,6 +249,10 @@ padding-left: 50px;
     margin: 0;
 }
 
+#listaDArtista{
+    padding-left: 20px;
+}
+
 
 
 @media (max-width:420px){

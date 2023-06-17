@@ -3,6 +3,7 @@ const busqueda = document.querySelector('#busquedaForm')
 const btn      = document.querySelector('#btn')
 const form     = document.querySelector('form')
 
+
 form.addEventListener('submit', function(e){
 
     e.preventDefault();
@@ -31,10 +32,8 @@ let qStringObj = new URLSearchParams (qString);
 let id = qStringObj.get(`id`);
 
 
-let proxi = "https://cors-anywhere.herokuapp.com/"; 
-let endpoint ="https://api.deezer.com/artist/" + id;
 
-let url = proxi+endpoint
+let url = "https://api.allorigins.win/raw?url=https://api.deezer.com/artist/" + id;
 let = limiteAlbum = "/albums?limit=5"
 
 fetch(url)
