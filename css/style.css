@@ -18,13 +18,13 @@ body{
 }
         /*-------------Seccion Header ---------------*/
 #header {
-    background-color: lightgreen;
+    background-color: lightskyblue;
     height: 100px;
 }
 .art-head{
     width: 30%;
     height: 100px;
-    background-color: lightgreen;
+    background-color: lightskyblue;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +48,8 @@ body{
     width: 40%;
     align-items: center;
     display:flex;
-    background-color: lightgreen;
+    background-color: lightskyblue;
+    ;
 }
 .header-sec{
     height: 100px;
@@ -106,7 +107,7 @@ ul,li{
 /*FOOTER (EDITAR FONT Y COLORES)*/
 
 footer{
-    background-color: lightgreen;
+    background-color: lightskyblue;
 }
 
 .footerUl{
@@ -120,8 +121,7 @@ footer{
  }
 
        /*-------------Seccion Body ---------------*/
-/* .h2Style{
-} */
+
 #sec-cancion{
     flex-direction: row;
     flex-wrap: wrap;
@@ -170,6 +170,7 @@ footer{
     height: 250px;
     object-fit: contain;
     border-radius: 20px;
+    width: 100%;
 }
 .card-body {
   display: flex;
